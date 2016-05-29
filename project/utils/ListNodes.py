@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from ..objs.ListNode import ListNode
 
 class ListNodes(object):
