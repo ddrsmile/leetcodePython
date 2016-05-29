@@ -1,2 +1,4 @@
 test
 __pycache__
+project/main/main.py
+project/sols/sol.py
