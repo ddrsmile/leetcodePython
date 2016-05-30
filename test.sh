@@ -22,7 +22,7 @@ cnt=0
 for case_num in ${cases[@]}
 do
     echo RUN PROBLEM $case_num
-    ./run.py $case_num
+    python3 run.py $case_num
     echo done
     echo
     let cnt=cnt+1
