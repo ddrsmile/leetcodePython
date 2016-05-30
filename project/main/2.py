@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-from ..utils.ListNodes import ListNodes
-from ..utils.InputHandler import InputHandler
+from .base import Base
 from ..objs.ListNode import ListNode
-from ..sols.sol import Solution
+from ..utils.ListNodes import ListNodes
 
-class Main(object):
+class Main(Base):
     def __init__(self, path):
-        self.ih = InputHandler(path)
+        Base.__init__(self, path)
         self.list_util = ListNodes()
-        self.sol = Solution()
 
     def main(self):
         in_int_list = self.ih.get_data_as_int_list()

@@ -1,0 +1,8 @@
+language: bash
+
+branches:
+    only:
+        - master
+
+script:
+    - ./test.sh

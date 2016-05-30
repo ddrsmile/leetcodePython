@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from ..utils.InputHandler import InputHandler
-from ..sols.sol import Solution
+from .base import Base
 
-class Main(object):
-
+class Main(Base):
     def __init__(self, path):
-        self.ih = InputHandler(path)
-        self.sol = Solution()
+        Base.__init__(self, path)
 
     def main(self):
         ins = self.ih.get_data_as_int_list()
