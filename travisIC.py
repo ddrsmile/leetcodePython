@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 
-
 def get_cases():
     for f in os.listdir('./project/main'):
         if f.endswith('.py') and f != 'base.py' and f != 'main.py':
