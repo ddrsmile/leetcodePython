@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os, sys
+import os
 
 
 def get_cases():
@@ -9,13 +8,15 @@ def get_cases():
             yield(f.split('.')[0])
 
 
-cases = [x for x in get_cases()]
+#cases = get_cases()
+cases = [8]
+run_stat = 'python run.py %s'
 
-run_stat = 'python run.py {}'
-
-print('STRAT RUN TEST')
+print('START RUN TEST')
 for case in cases:
+    case = str(case)
     print('RUN TEST ' + case)
-    os.system(run_stat.format(case))
+    print(run_stat % case)
+    os.system(run_stat % case)
     print('DONE')
     print()
