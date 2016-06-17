@@ -7,9 +7,7 @@ def get_cases():
         if f.endswith('.py') and f != 'base.py' and f != 'main.py':
             yield(f.split('.')[0])
 
-
-#cases = get_cases()
-cases = [8]
+cases = get_cases()
 run_stat = 'python run.py %s'
 
 print('START RUN TEST')
