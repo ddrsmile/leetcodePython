@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from ..utils.InputHandler import InputHandler
 from ..sols.sol import Solution
