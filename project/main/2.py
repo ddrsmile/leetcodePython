@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from .base import Base
-from ..objs.ListNode import ListNode
-from ..utils.ListNodes import ListNodes
+from project.main.base import Base
+from project.objs.ListNode import ListNode
+from project.utils.ListNodes import ListNodes
 
 class Main(Base):
     def __init__(self, path):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .base import Base
+from project.main.base import Base
 
 class Main(object):
     def __init__(self, path):

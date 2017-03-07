@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from .base import Base
+from project.main.base import Base
 
 class Main(Base):
     def __init__(self, path):

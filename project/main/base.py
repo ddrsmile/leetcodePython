@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from ..utils.InputHandler import InputHandler
-from ..sols.sol import Solution
+from project.utils.InputHandler import InputHandler
+from project.sols.sol import Solution
 
 class Base(object):
     def __init__(self, path):

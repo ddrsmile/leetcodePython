@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
 
 def get_cases():
     for f in os.listdir('./project/main'):
-        if f.endswith('.py') and f != 'base.py' and f != 'main.py':
+        if f.endswith('.py') and f != 'base.py' and f != 'main.py' and f != '__init__.py':
             yield(f.split('.')[0])
 
 cases = get_cases()
