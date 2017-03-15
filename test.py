@@ -1,8 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
+import os, sys
 from importlib import reload
 from project import SetFile
+
+unload_modules = [
+    'project.main.main',
+    'project.main',
+    'project.main.base',
+    'project.sols.sol',
+    'project.sols',
+    'project.utils.InputHandler'
+]
 
 def get_cases():
     for f in os.listdir('./project/main'):
@@ -14,6 +23,10 @@ def run(input_path):
     m = main.Main(input_path)
     m.main()
 
+def unload():
+    for module in unload_modules:
+        del sys.modules[module]
+        
 
 if __name__ == '__main__':
     import argparse
@@ -36,6 +49,10 @@ if __name__ == '__main__':
         print('RUN TEST {case}'.format(case=case))
         set_file.update(case)
         input_path = set_file.get_input_path()
+        print('========== RESULT ==========')
         run(input_path)
+        print('=========== DONE ===========')
+        print()
+        unload()
     
     print("Completed running test...")

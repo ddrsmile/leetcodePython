@@ -10,13 +10,12 @@ INPUT_DIR = os.path.join(BASE_DIR, 'input')
 class SetFile(object):
     def __init__(self):
         self.case_num = None
-    
+
     def update(self, case_num):
         self.case_num = case_num
 
         main_src = os.path.join(MAIN_DIR, '{case_num}.py'.format(case_num=case_num))
         main_dist = os.path.join(MAIN_DIR, 'main.py')
-        print(main_src)
         copy(main_src, main_dist)
 
         sol_scr = os.path.join(SOLS_DIR, '{case_num}.py'.format(case_num=case_num))
