@@ -7,11 +7,6 @@ class Main(Base):
 
     def main(self):
         in_int = self.ih.get_data_as_int_list()
-        if in_int:
-            print(in_int)
-        else:
-            print('kkkk')
-
         for i in range(len(in_int)):
             height = in_int[i]
             print(self.sol.maxArea(height))
