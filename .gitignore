@@ -4,3 +4,4 @@ __pycache__
 project/main/main.py
 project/sols/sol.py
 env
+.idea/
