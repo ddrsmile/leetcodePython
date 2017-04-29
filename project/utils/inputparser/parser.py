@@ -83,7 +83,7 @@ class StringParser(Parser):
         super(StringParser, self).__init__(path)
 
     def _clean_chars(self, chars):
-        return chars.strip()
+        return chars.strip().replace('"', '')
 
     def _to_value(self, chars):
         chars = self._clean_chars(chars)
