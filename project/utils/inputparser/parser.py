@@ -19,7 +19,7 @@ class Parser(object):
             return [self._to_value(chars)]
 
         chars = chars[1:-1].split(',')
-        return [self._to_value(char.strip()) for char in chars]
+        return [self._to_value(char.strip()) for char in chars if char]
 
     def _to_lists(self, chars):
         chars = self._clean_chars(chars)
@@ -27,7 +27,7 @@ class Parser(object):
             return [self._to_value(chars)]
 
         chars = chars[1:-1].replace('],[', '], [').split('], [')
-        return [self._to_list(char) for char in chars]
+        return [self._to_list(char) for char in chars if char]
 
     def parse_data_as_single_value(self):
         output = []
