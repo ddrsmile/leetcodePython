@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os, sys
-from importlib import reload
 from project import SetFile
 
 unload_modules = [
@@ -10,7 +9,9 @@ unload_modules = [
     'project.main.base',
     'project.sols.sol',
     'project.sols',
-    'project.utils.InputHandler'
+    'project.utils.inputparser',
+    'project.utils.inputparser.parserfactory',
+    'project.utils.inputparser.parser'
 ]
 
 def get_cases():
@@ -25,15 +26,18 @@ def run(input_path):
 
 def unload():
     for module in unload_modules:
-        del sys.modules[module]
+        try:
+            del sys.modules[module]
+        except KeyError:
+            pass
         
 
 if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description="run test cases, please assign either all or case...")
+    parser.add_argument("cases", nargs="*", type=int, help="assign the numbers of test cases...")
     parser.add_argument("-a", "--all", dest='all', action='store_true', help="assign all to run all test cases...")
-    parser.add_argument("-c", "--cases", nargs="*", type=int, help="assign the numbers of test cases...")
     parser.set_defaults(all=False)
     args = parser.parse_args()
 
