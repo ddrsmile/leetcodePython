@@ -11,9 +11,10 @@ class Solution(object):
         converted = 0
 
         while tmp != 0:
-            if converted != 0 and max_val//converted < 10:
+            if converted != 0 and max_val/converted < 10:
                 return False
             converted = converted*10 + tmp%10
-            tmp /= 10
+            tmp //= 10
+
 
         return converted == x
