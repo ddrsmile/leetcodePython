@@ -87,4 +87,4 @@ class StringParser(Parser):
 
     def _to_value(self, chars):
         chars = self._clean_chars(chars)
-        return float(chars.strip())
+        return chars.strip()
