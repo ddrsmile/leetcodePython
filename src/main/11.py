@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from project.main.base import Base
-from project.utils.inputparser.parser import IntegerParser
+from src.main.base import Base
+from src.utils.inputparser.parser import IntegerParser
 
 class Main(Base):
     def __init__(self, path):

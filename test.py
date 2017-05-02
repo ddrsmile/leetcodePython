@@ -1,26 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os, sys
-from project import SetFile
+from src import SetFile
 
 unload_modules = [
-    'project.main.main',
-    'project.main',
-    'project.main.base',
-    'project.sols.sol',
-    'project.sols',
-    'project.utils.inputparser',
-    'project.utils.inputparser.parserfactory',
-    'project.utils.inputparser.parser'
+    'src.main.main',
+    'src.main',
+    'src.main.base',
+    'src.sols.sol',
+    'src.sols',
+    'src.utils.inputparser',
+    'src.utils.inputparser.parserfactory',
+    'src.utils.inputparser.parser'
 ]
 
 def get_cases():
-    for f in os.listdir('./project/main'):
+    for f in os.listdir('./src/main'):
         if f.endswith('.py') and f != 'base.py' and f != 'main.py' and f != '__init__.py':
             yield(f.split('.')[0])
 
 def run(input_path):
-    from project.main import main
+    from src.main import main
     m = main.Main(input_path)
     m.main()
 

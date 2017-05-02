@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-from project.main.base import Base
-from project.utils.inputparser.parser import StringParser
+from src.main.base import Base
+from src.utils.inputparser.parser import IntegerParser
+
 
 class Main(Base):
     def __init__(self, path):
-        super(Main, self).__init__(path, StringParser)
+        super(Main, self).__init__(path, IntegerParser)
 
     def main(self):
         input_values = self.parser.parse_data_as_single_value()
 
         for val in input_values:
-            print(self.sol.romanToInt(val))
+            print(self.sol.isPalindrome(val))

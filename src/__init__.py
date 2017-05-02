@@ -5,7 +5,7 @@ from shutil import copy
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MAIN_DIR = os.path.join(BASE_DIR, 'main')
 SOLS_DIR = os.path.join(BASE_DIR, 'sols')
-INPUT_DIR = os.path.join(BASE_DIR, 'input')
+INPUT_DIR = os.path.join(os.path.dirname(BASE_DIR), 'input')
 
 class SetFile(object):
     def __init__(self):

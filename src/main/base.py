@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from project.utils.inputparser.parserfactory import ParserFactory
-from project.sols.sol import Solution
+from src.utils.inputparser.parserfactory import ParserFactory
+from src.sols.sol import Solution
 
 class Base(object):
     def __init__(self, path, parser_type):

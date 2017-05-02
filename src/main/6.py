@@ -1,6 +1,6 @@
-# -*- coding utf-8 -*-
-from project.main.base import Base
-from project.utils.inputparser.parser import StringParser
+# -*- coding: utf-8 -*-
+from src.main.base import Base
+from src.utils.inputparser.parser import StringParser
 
 class Main(Base):
     def __init__(self, path):
@@ -11,5 +11,7 @@ class Main(Base):
         
         for i in range(len(input_values)//2):
             s = input_values[2*i]
-            p = input_values[2*i + 1]
-            print(self.sol.isMatch(s, p))
+            n_row = int(input_values[2*i + 1])
+
+            print(self.sol.convert(s, n_row))
+        
