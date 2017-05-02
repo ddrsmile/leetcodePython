@@ -4,13 +4,10 @@ from project.utils.inputparser.parser import IntegerParser
 
 class Main(Base):
     def __init__(self, path):
-        super(Main, self).__init__(path)
+        super(Main, self).__init__(path, IntegerParser)
 
     def main(self):
+        input_values = self.parser.parse_data_as_single_value()
 
-        self.factory.set_type(IntegerParser)
-        int_parser = self.factory.create(self.path)
-        input_values = int_parser.parse_data_as_single_value()
-
-        for num in input_values:
-            print(self.sol.intToRoman(num))
+        for val in input_values:
+            print(self.sol.intToRoman(val))

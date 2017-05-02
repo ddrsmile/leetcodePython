@@ -5,14 +5,11 @@ from project.utils.ListNodes import ListNodes
 
 class Main(Base):
     def __init__(self, path):
-        super(Main, self).__init__(path)
+        super(Main, self).__init__(path, IntegerParser)
         self.list_util = ListNodes()
 
     def main(self):
-        self.factory.set_type(IntegerParser)
-        int_parser = self.factory.create(self.path)
-        input_list = int_parser.parse_data_as_list()
-
+        input_list = self.parser.parse_data_as_list()
 
         for i in range(len(input_list)//2):
             l1 = self.list_util.get_list(input_list[2*i])

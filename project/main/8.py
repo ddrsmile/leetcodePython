@@ -4,12 +4,10 @@ from project.utils.inputparser.parser import StringParser
 
 class Main(Base):
     def __init__(self, path):
-        super(Main, self).__init__(path)
+        super(Main, self).__init__(path, StringParser)
 
     def main(self):
-        self.factory.set_type(StringParser)
-        string_parser = self.factory.create(self.path)
-        input_values = string_parser.parse_data_as_single_value()
+        input_values = self.parser.parse_data_as_single_value()
 
-        for value in input_values:
-            print(self.sol.myAtoi(value))
+        for val in input_values:
+            print(self.sol.myAtoi(val))
