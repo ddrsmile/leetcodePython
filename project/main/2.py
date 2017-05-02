@@ -15,14 +15,4 @@ class Main(Base):
             l1 = self.list_util.get_list(input_list[2*i])
             l2 = self.list_util.get_list(input_list[2*i + 1])
             head = self.sol.addTwoNumbers(l1, l2)
-
-            if not head:
-                print("NO INPUT")
-                continue
-            
-            res = ''
-            while head.next:
-                res += str(head.val) + ','
-                head = head.next
-            res += str(head.val)
-            print(res)
+            self.list_util.show_list(head)

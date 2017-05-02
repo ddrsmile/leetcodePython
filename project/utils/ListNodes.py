@@ -57,4 +57,13 @@ class ListNodes(object):
             p = tmp
         return p
 
-
+    def show_list(self, head):
+        if not head:
+            print("None")
+            return None
+        out = '['
+        while head.next:
+            out += str(head.val) + ', '
+            head = head.next
+        out += str(head.val) + ']'
+        print(out)
